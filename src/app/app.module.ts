@@ -8,6 +8,8 @@ import { RatingComponent } from './header/rating/rating.component';
 import { BrandsComponent } from './header/brands/brands.component';
 import { ExplanationsComponent } from './header/explanations/explanations.component';
 import { SearchBoxComponent } from './header/search-box/search-box.component';
+import { FashionComponent } from './header/fashion/fashion.component';
+import { BrandMenuComponent } from './header/brands/brand-menu.component';
 
 const routes: Routes = [
   {
@@ -17,6 +19,10 @@ const routes: Routes = [
   {
     path: 'brands',
     component: BrandsComponent
+  },
+  {
+    path: 'fashion',
+    component: FashionComponent
   },
   {
     path: 'rating',
@@ -36,6 +42,8 @@ const routes: Routes = [
     RatingComponent,
     ExplanationsComponent,
     SearchBoxComponent,
+    BrandMenuComponent,
+    FashionComponent
   ],
   imports: [
     BrowserModule,
