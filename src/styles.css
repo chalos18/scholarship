@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 html{
-  overflow-x: hidden;
-  overflow-y: hidden;
   height: 100%;
-  background-image: url("/header/images/purple-gradient.jpg");
+  background-image: url("/images/purple-gradient.jpg");
   background-size: cover;
 }
 
