@@ -6,9 +6,11 @@
   overflow-y: hidden;
 }
 
-html{
-  height: 100%;
-  background-image: url("/images/purple-gradient.jpg");
+html { 
+  background: url('./app/images/phone-thrown.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
