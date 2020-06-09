@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RatingComponent } from './rating/rating.component';
 import { BrandsComponent } from './brands/brands.component';
+import { BrandMenuComponent } from './brands/brand-menu.component';
 import { ExplanationsComponent } from './explanations/explanations.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 
@@ -36,6 +37,7 @@ const routes: Routes = [
     RatingComponent,
     ExplanationsComponent,
     SearchBoxComponent,
+    BrandMenuComponent
   ],
   imports: [
     BrowserModule,
