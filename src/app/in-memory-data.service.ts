@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { HomeComponent } from '../app/header/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { ReturnStatement } from '@angular/compiler';
 
 @Injectable({

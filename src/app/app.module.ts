@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './header/home/home.component';
-import { RatingComponent } from './header/rating/rating.component';
-import { BrandsComponent } from './header/brands/brands.component';
-import { ExplanationsComponent } from './header/explanations/explanations.component';
-import { SearchBoxComponent } from './header/search-box/search-box.component';
+import { HomeComponent } from './home/home.component';
+import { RatingComponent } from './rating/rating.component';
+import { BrandsComponent } from './brands/brands.component';
+import { ExplanationsComponent } from './explanations/explanations.component';
+import { SearchBoxComponent } from './search-box/search-box.component';
 
 const routes: Routes = [
   {
