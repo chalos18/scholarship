@@ -3,11 +3,11 @@ import { Company } from '../company';
 import { COMPANIES } from '../moch-companies';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-companies',
+  templateUrl: './companies.component.html',
+  styleUrls: ['./companies.component.css']
 })
-export class HomeComponent implements OnInit {
+export class CompaniesComponent implements OnInit {
 
   company = COMPANIES;
   

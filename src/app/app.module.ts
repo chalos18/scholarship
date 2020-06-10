@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { CompaniesComponent } from './companies/companies';
 import { RatingComponent } from './rating/rating.component';
 import { BrandsComponent } from './brands/brands.component';
 import { BrandMenuComponent } from './brands/brand-menu.component';
@@ -13,8 +13,8 @@ import { SearchBoxComponent } from './search-box/search-box.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent
+    path: 'companies',
+    component: CompaniesComponent
   },
   {
     path: 'brands',
@@ -33,7 +33,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    CompaniesComponent,
     BrandsComponent,
     RatingComponent,
     ExplanationsComponent,
