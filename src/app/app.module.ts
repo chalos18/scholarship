@@ -10,11 +10,16 @@ import { BrandsComponent } from './brands/brands.component';
 import { BrandMenuComponent } from './brands/brand-menu.component';
 import { ExplanationsComponent } from './explanations/explanations.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { CompanyDetailComponent } from './company-detail/company-detail.component';
 
 const routes: Routes = [
   {
     path: 'companies',
     component: CompaniesComponent
+  },
+  {
+    path: 'company-detail',
+    component: CompanyDetailComponent
   },
   {
     path: 'brands',
@@ -38,7 +43,8 @@ const routes: Routes = [
     RatingComponent,
     ExplanationsComponent,
     SearchBoxComponent,
-    BrandMenuComponent
+    BrandMenuComponent,
+    CompanyDetailComponent
   ],
   imports: [
     BrowserModule,
