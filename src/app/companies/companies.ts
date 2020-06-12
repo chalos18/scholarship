@@ -9,7 +9,7 @@ import { COMPANIES } from '../moch-companies';
 })
 export class CompaniesComponent implements OnInit {
 
-  company = COMPANIES;
+  companies = COMPANIES;
   
   selectedCompany: Company;
 
