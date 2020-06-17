@@ -1,1 +1,11 @@
-<p>company-detail works!</p>
+<div *ngIf="company">
+
+  <h2>{{company.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{company.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="company.name" placeholder="name"/>
+    </label>
+  </div>
+
+</div>
