@@ -13,6 +13,7 @@ import { SearchBoxComponent } from './search-box/search-box.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
     path: 'messages',
     component: MessagesComponent
   },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
 ];
 
 @NgModule({
@@ -51,7 +56,8 @@ const routes: Routes = [
     SearchBoxComponent,
     BrandMenuComponent,
     CompanyDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
