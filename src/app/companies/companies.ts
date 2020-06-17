@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Company } from '../company';
-import { COMPANIES } from '../moch-companies';
-import { CompanyDetailComponent } from '../company-detail/company-detail.component';
 import { CompanyService } from '../company.service';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-companies',
@@ -16,17 +15,18 @@ export class CompaniesComponent implements OnInit {
 
   companies: Company[];
 
-  getCompanies(): void {
-    this.companyService.getCompanies().subscribe(companies => this.companies = companies);
-  }
+  constructor(private companyService: CompanyService, private messageService: MessageService) { }
 
-  constructor(private companyService: CompanyService) { }
-
-  ngOnInit(): void {
+  ngOnInit() {
     this.getCompanies();
   }
 
   onSelect(company: Company): void {
     this.selectedCompany = company;
+    this.messageService.add(`CompanyService: Selected company id=${company.id}`);
+  }
+
+  getCompanies(): void {
+    this.companyService.getCompanies().subscribe(companies => this.companies = companies);
   }
 }

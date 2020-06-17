@@ -11,6 +11,8 @@ import { BrandMenuComponent } from './brands/brand-menu.component';
 import { ExplanationsComponent } from './explanations/explanations.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
 
 const routes: Routes = [
   {
@@ -33,6 +35,10 @@ const routes: Routes = [
     path: 'explanations',
     component: ExplanationsComponent
   },
+  {
+    path: 'messages',
+    component: MessagesComponent
+  },
 ];
 
 @NgModule({
@@ -44,12 +50,14 @@ const routes: Routes = [
     ExplanationsComponent,
     SearchBoxComponent,
     BrandMenuComponent,
-    CompanyDetailComponent
+    CompanyDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
