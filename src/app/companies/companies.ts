@@ -11,19 +11,12 @@ import { MessageService } from '../message.service';
 })
 export class CompaniesComponent implements OnInit {
 
-  selectedCompany: Company;
-
   companies: Company[];
 
   constructor(private companyService: CompanyService, private messageService: MessageService) { }
 
   ngOnInit() {
     this.getCompanies();
-  }
-
-  onSelect(company: Company): void {
-    this.selectedCompany = company;
-    this.messageService.add(`CompanyService: Selected company id=${company.id}`);
   }
 
   getCompanies(): void {

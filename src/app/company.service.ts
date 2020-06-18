@@ -18,4 +18,10 @@ export class CompanyService {
     this.messageService.add('CompanyService: fetched companies');
     return of(COMPANIES);
   }
+  
+  getCompany(id: number): Observable<Company> {
+    // TODO:send the message _after_fetching the hero
+    this.messageService.add(`CompanyService: fetched company id=${id}`);
+    return of(COMPANIES.find(company => company.id === id));
+  }
 }
