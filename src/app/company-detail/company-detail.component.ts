@@ -29,6 +29,11 @@ export class CompanyDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.companyService.updateCompany(this.company)
+      .subscribe(() => this.goBack());
+  }
+
   getCompany(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.companyService.getCompany(id).subscribe(company => this.company = company);

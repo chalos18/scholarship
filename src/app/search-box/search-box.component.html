@@ -1,5 +1,13 @@
-<div class="field">
-  <div class="control">
-    <input class="input" id="myInput" onkeyup="myFunction()" placeholder="Type Here..." type="text">
-  </div>
+<div id="search-component">
+  <h4><label for="search-box">Company Search</label></h4>
+
+  <input #searchBox id="search-box" (input)="search(searchBox.value)">
+
+  <ul class="search-result">
+    <li *ngFor="let company of companies$ | async">
+      <a routerLink="/detail/{{company.id}}">
+        {{company.name}}
+      </a>
+    </li>
+  </ul>
 </div>
