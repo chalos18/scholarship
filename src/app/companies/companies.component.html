@@ -1,15 +1,15 @@
 <h2>My Companies</h2>
 
 <div>
-  <label>Company name:
+    <label>Company name:
     <input #companyName>
   </label>
 </div>
 
 <ul class="companies">
-  <li *ngFor="let company of companies">
-    <a routerLink="/detail">
-      <span class="badge"></span> {{company.name}}
+    <li *ngFor="let company of companies">
+        <a routerLink="/detail">
+      {{company.name}}
     </a>
-  </li>
+    </li>
 </ul>
