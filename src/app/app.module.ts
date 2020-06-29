@@ -14,8 +14,6 @@ import { BrandMenuComponent } from './brands/brand-menu.component';
 import { ExplanationsComponent } from './explanations/explanations.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
-import { MessagesComponent } from './messages/messages.component';
-import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 
@@ -41,12 +39,15 @@ const routes: Routes = [
     component: ExplanationsComponent
   },
   {
-    path: 'messages',
-    component: MessagesComponent
-  },
-  {
     path: 'dashboard',
     component: DashboardComponent
+  },{
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  },
+  { path: 'detail',
+  component: CompanyDetailComponent 
   },
 ];
 
@@ -60,14 +61,12 @@ const routes: Routes = [
     SearchBoxComponent,
     BrandMenuComponent,
     CompanyDetailComponent,
-    MessagesComponent,
     DashboardComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    AppRoutingModule,
     HttpClientModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
