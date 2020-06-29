@@ -118,8 +118,8 @@ export class CompanyService {
     };
   }
 
-  /** Log a HeroService message with the MessageService */
+  /** Log a CompanyService message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`HeroService: ${message}`);
+    this.messageService.add(`CompanyService: ${message}`);
   }
 }
