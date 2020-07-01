@@ -22,16 +22,11 @@ export class CompanyDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getCompany();
   }
 
   goBack(): void {
     this.location.back();
   }
 
-  getCompany(): void {
-    const name = +this.route.snapshot.paramMap.get('name');
-    this.companyService.getCompany(name).subscribe(company => this.company = company);
-  }
 
 }
