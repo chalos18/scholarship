@@ -47,7 +47,7 @@ const routes: Routes = [
     redirectTo: '/dashboard',
     pathMatch: 'full'
   },
-  { path: 'detail',
+  { path: 'detail/:key',
   component: CompanyDetailComponent 
   },
 ];

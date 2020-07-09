@@ -15,6 +15,7 @@ import { CompanyService } from '../company.service';
   styleUrls: ['./search-box.component.css']
 })
 export class SearchBoxComponent implements OnInit {
+ currentBrand: string
   companies$: Observable<Company[]>;
   private searchTerms = new Subject<string>();
 

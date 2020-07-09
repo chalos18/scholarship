@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { CompanyService } from '../company.service';
 import { Company } from '../company';
+import { CompanyDetail } from '../companydetail';
 
 
 @Component({
@@ -15,6 +16,8 @@ export class CompanyDetailComponent implements OnInit {
 
   @Input() company: Company;
 
+  companyDetail : CompanyDetail;
+  
   constructor(
     private route: ActivatedRoute,
     private companyService: CompanyService,
@@ -22,6 +25,13 @@ export class CompanyDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      let key = params['key'];
+      this.companyService.getCompanyDetail(key).subscribe(detail => {
+        // show the detail on the page
+        this.companyDetail = detail;
+      });
+    });
   }
 
   goBack(): void {

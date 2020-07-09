@@ -6,6 +6,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Company } from './company';
 import { MessageService } from './message.service';
+import { CompanyDetail } from './companydetail';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ import { MessageService } from './message.service';
 export class CompanyService {
   
   private companiesUrl = 'api/companies'; // URL to web apia
+  private companydetailUrl = 'api/companydetail'; // URL to web apia
 
   HttpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -25,6 +27,7 @@ export class CompanyService {
   
   /** GET companies from the server */
   getCompanies(): Observable<Company[]> {
+    console.log(`the company url is ${this.companiesUrl}`);
     return this.http.get<Company[]>(this.companiesUrl)
       .pipe(
         tap(_ => this.log('fetched companies')),
@@ -52,6 +55,15 @@ export class CompanyService {
     return this.http.get<Company>(url).pipe(
       tap(_ => this.log(`fetched company name=${name}`)),
       catchError(this.handleError<Company>(`getCompany name=${name}`))
+    );
+  }
+
+  /** GET company detail by key. Will 404 if name not found */
+  getCompanyDetail(key: string): Observable<CompanyDetail> {
+    const url = `${this.companydetailUrl}/${key}`;
+    return this.http.get<CompanyDetail>(url).pipe(
+      tap(result => this.log(`fetched company name=${result.phone}`)),
+      catchError(this.handleError<CompanyDetail>(`getCompanyDetail failed`))
     );
   }
 

@@ -1,10 +1,12 @@
 <div *ngIf="company">
 
-  <h2>{{company.name | uppercase}} Details</h2>
-  <div>
-    <label>name:
+    <h2>{{company.name | uppercase}} Details</h2>
+    <div>
+        <label>name:
       <input [(ngModel)]="company.name" placeholder="name"/>
     </label>
-  </div>
+    </div>
 </div>
+<div style="color:red;">The company phone number is {{ companyDetail.phone }}</div>
+<div style="color:red;">The company description is {{ companyDetail.description }}</div>
 <button (click)="goBack()">go back</button>
