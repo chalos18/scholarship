@@ -10,7 +10,7 @@ import { MessageService } from '../message.service';
   styleUrls: ['./companies.component.css']
 })
 export class CompaniesComponent implements OnInit {
-
+  currentMenu: string;
   companies: Company[];
 
   constructor(private companyService: CompanyService, private messageService: MessageService) { }
