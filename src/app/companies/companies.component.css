@@ -1,80 +1,22 @@
-* {
-    color: white;
+.category-menu {
+    background-color: #3C4F76;
+    width: 20rem;
+}
+
+.fashion {
+    background: #3C4F76;
+    width: 20rem;
 }
 
 a {
-    padding: 1.35rem;
     color: white;
 }
 
-.nav-item:hover {
-    color: #3C4F76;
-    background-color: #D1D1D1;
-}
-
-.nav-item {
-    background-color: #3C4F76;
-}
-
-.columns {
-    margin-left: .75rem;
-    margin-right: .75rem;
-}
-
-.column {
-    height: 100%;
-    margin-top: 0.05rem;
-    border-radius: 5px;
-}
-
-.one {
-    color: white;
-    margin-right: 0.5rem;
-    border-radius: 5px;
-    height: 100%;
-}
-
-.two {
-    color: white;
-    height: 100%;
-}
-
-@media only screen and (max-width: 600px) {
-    .nav-item {
-        list-style-type: none;
-        display: block;
-    }
-}
-
-input {
+a:hover {
+    background-color: white;
     color: black;
 }
 
-.companies {
+ul {
     list-style-type: none;
-    width: 15em;
-}
-
-.companies li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    margin: .5em;
-    padding: .3em 0;
-    border-radius: 4px;
-}
-
-.companies li:hover {
-    color: #607D8B;
-    background-color: #DDD;
-}
-
-.companies li.selected {
-    background-color: #CFD8DC;
-    color: white;
-}
-
-.companies li.selected:hover {
-    background-color: #BBD8DC;
-    color: white;
 }

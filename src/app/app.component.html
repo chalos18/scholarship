@@ -2,41 +2,42 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-  <script src="./header/search-box/search-box.js"></script>
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script src="./header/search-box/search-box.js"></script>
+    <title>Document</title>
 </head>
 <header>
-  <nav class="navbar level">
-    <div class="level-left">
-      <p class="level-item has-text-centered my-website">
-        My Website
-      </p>
-    </div>
-    <div class="level-right">
-      <p class="level-item has-text-centered">
-        <a routerLink="/companies" class="link is-info">Companies</a>
-      </p>
-      <p class="level-item has-text-centered">
-        <a routerLink="/dashboard" class="link is-info">Dashboard</a>
-      </p>
-      <p class="level-item has-text-centered">
-        <a routerLink="/brands" class="link is-info">Brands</a>
-      </p>
-      <p class="level-item has-text-centered">
-        <a routerLink="/rating" class="link is-info">Rating</a>
-      </p>
-      <p class="level-item has-text-centered">
-        <a routerLink="/explanations" class="link is-info">Explanations</a>
-      </p>
-    </div>
-  </nav>
+    <nav class="navbar level">
+        <div class="level-left">
+            <p class="level-item has-text-centered my-website">
+                My Website
+            </p>
+        </div>
+        <div class="level-right">
+            <p class="level-item has-text-centered">
+                <a routerLink="/companies" class="link is-info">Companies</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a routerLink="/dashboard" class="link is-info">Dashboard</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a routerLink="/brands" class="link is-info">Brands</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a routerLink="/rating" class="link is-info">Rating</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a routerLink="/explanations" class="link is-info">Explanations</a>
+            </p>
+            <app-search-box></app-search-box>
+        </div>
+    </nav>
 </header>
 
 <body>
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </body>
 
 </html>

@@ -1,54 +1,56 @@
-<div class="columns is-mobile">
-    <div class="column one is-one-third">
-        <div class="nav-item column " (click)="currentMenu = 'fashion'">Fashion</div>
-        <div class="nav-item column " (click)="currentMenu = 'shoes'">Shoes</div>
-        <div class="nav-item column " (click)="currentMenu = 'electronics'">Electronics</div>
-        <div class="nav-item column " (click)="currentMenu = 'jewelry'">Jewelry</div>
-        <div class="nav-item column " (click)="currentMenu = 'cosmetics'">Cosmetics</div>
-        <div class="nav-item column " (click)="currentMenu = 'beverages'">Beverages</div>
-        <div class="nav-item column " (click)="currentMenu = 'gaming'">Gaming</div>
-    </div>
-    <div class="column two is-one-third" *ngIf="currentMenu == 'fashion'">
-        <h2>My Companies</h2>
+<div class="category-menu">
+    <ul>
+        <li>
+            <a (click)="currentMenu = 'fashion'">Fashion</a>
+            <a (click)="currentMenu = 'shoes'">Shoes</a>
+            <a (click)="currentMenu = 'electronics'">Electronics</a>
+            <a (click)="currentMenu = 'jewelry'">Jewelry</a>
+            <a (click)="currentMenu = 'cosmetics'">Cosmetics</a>
+            <a (click)="currentMenu = 'beverages'">Beverages</a>
+            <a (click)="currentMenu = 'gaming'">Gaming</a>
+        </li>
+    </ul>
+</div>
+<div class="fashion" *ngIf="currentMenu == 'fashion'">
+    <h2>My Companies</h2>
 
-        <div>
-            <label>Company name:
+    <div>
+        <label>Company name:
                 <app-search-box></app-search-box>
             </label>
-        </div>
+    </div>
 
-        <ul class="companies">
-            <li *ngFor="let company of companies">
-                <a [routerLink]="['/detail', company.key]">{{company.name}}</a>
-            </li>
-        </ul>
-    </div>
-    <div class="column two is-one-third" *ngIf="currentMenu == 'shoes'">
-        <app-search-box></app-search-box>
-        <a class="nav-item column " href="">DC</a>
-        <a class="nav-item column " href="">Nike</a>
-        <a class="nav-item column " href="">Adidas</a>
-    </div>
-    <div class="column two is-one-third" *ngIf="currentMenu == 'electronics'">
-        <app-search-box></app-search-box>
-        <a class="nav-item column " href="">Panasonic</a>
-        <a class="nav-item column " href="">Dell</a>
-        <a class="nav-item column " href="">Alienware</a>
-    </div>
-    <div class="column two is-one-third" *ngIf="currentMenu == 'jewelry'">
-        <app-search-box></app-search-box>
-        <a class="nav-item column " href="">Pandora</a>
-    </div>
-    <div class="column two is-one-third" *ngIf="currentMenu == 'cosmetics'">
-        <app-search-box></app-search-box>
-        <a class="nav-item column " href="">Nike</a>
-    </div>
-    <div class="column two is-one-third" *ngIf="currentMenu == 'beverages'">
-        <app-search-box></app-search-box>
-        <a class="nav-item column " href="">Pandora</a>
-    </div>
-    <div class="column two is-one-third" *ngIf="currentMenu == 'gaming'">
-        <app-search-box></app-search-box>
-        <a class="nav-item column " href="">Riot</a>
-    </div>
+    <ul>
+        <li *ngFor="let company of companies">
+            <a [routerLink]="['/detail', company.key]">{{company.name}}</a>
+        </li>
+    </ul>
+</div>
+<div *ngIf="currentMenu == 'shoes'">
+    <app-search-box></app-search-box>
+    <a href="">DC</a>
+    <a href="">Nike</a>
+    <a href="">Adidas</a>
+</div>
+<div *ngIf="currentMenu == 'electronics'">
+    <app-search-box></app-search-box>
+    <a href="">Panasonic</a>
+    <a href="">Dell</a>
+    <a href="">Alienware</a>
+</div>
+<div *ngIf="currentMenu == 'jewelry'">
+    <app-search-box></app-search-box>
+    <a href="">Pandora</a>
+</div>
+<div *ngIf="currentMenu == 'cosmetics'">
+    <app-search-box></app-search-box>
+    <a href="">Nike</a>
+</div>
+<div *ngIf="currentMenu == 'beverages'">
+    <app-search-box></app-search-box>
+    <a href="">Pandora</a>
+</div>
+<div *ngIf="currentMenu == 'gaming'">
+    <app-search-box></app-search-box>
+    <a href="">Riot</a>
 </div>
