@@ -53,8 +53,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CompaniesComponent } from './companies/companies';
 import { RatingComponent } from './rating/rating.component';
-import { BrandsComponent } from './brands/brands.component';
-import { BrandMenuComponent } from './brands/brand-menu.component';
 import { ExplanationsComponent } from './explanations/explanations.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
@@ -70,10 +68,6 @@ const routes: Routes = [
   {
     path: 'company-detail',
     component: CompanyDetailComponent
-  },
-  {
-    path: 'brands',
-    component: BrandsComponent
   },
   {
     path: 'rating',
@@ -101,11 +95,9 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     CompaniesComponent,
-    BrandsComponent,
     RatingComponent,
     ExplanationsComponent,
     SearchBoxComponent,
-    BrandMenuComponent,
     CompanyDetailComponent,
     MainNavComponent,
   ],
