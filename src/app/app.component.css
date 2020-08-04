@@ -1,5 +1,4 @@
-* {
-    overflow-x: hidden;
+html {
     overflow-y: hidden;
 }
 
@@ -7,7 +6,6 @@
     font-size: 1.5rem;
     background-color: transparent;
     margin: auto;
-    overflow-x: auto;
     padding: 0 20px;
     margin-bottom: 0.2rem;
 }

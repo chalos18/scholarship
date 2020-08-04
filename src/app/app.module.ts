@@ -58,8 +58,9 @@ import { BrandMenuComponent } from './brands/brand-menu.component';
 import { ExplanationsComponent } from './explanations/explanations.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 const routes: Routes = [
   {
@@ -83,16 +84,16 @@ const routes: Routes = [
     component: ExplanationsComponent
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent
-  },
-  {
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full'
   },
   { path: 'detail/:key',
   component: CompanyDetailComponent 
+  },
+  {
+    path: 'main-nav',
+    component: MainNavComponent
   },
 ];
 
@@ -106,7 +107,7 @@ const routes: Routes = [
     SearchBoxComponent,
     BrandMenuComponent,
     CompanyDetailComponent,
-    DashboardComponent,
+    MainNavComponent,
   ],
   exports: [
     A11yModule,
@@ -170,7 +171,22 @@ const routes: Routes = [
     ),
 
 
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+
+    LayoutModule,
+
+
+    MatToolbarModule,
+
+
+    MatButtonModule,
+
+
+    MatIconModule,
+
+
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
