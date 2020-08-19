@@ -11,6 +11,7 @@ import { CompanyDetail } from './companydetail';
 @Injectable({
   providedIn: 'root'
 })
+// This does the URL and the gets companies from server by name
 export class CompanyService {
   
   private companiesUrl = 'api/companies'; // URL to web apia

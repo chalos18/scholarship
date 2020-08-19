@@ -6,6 +6,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
+    // Database that keeps each unique key for each brand
     const companies = [
       { key: 'lon001', name: 'Lonely' },
       { key: 'ilu001', name: 'I Love Ugly' },
@@ -18,6 +19,8 @@ export class InMemoryDataService implements InMemoryDbService {
       { key: 'tre', name: 'Trelise Cooper' },
       { key: 'com002', name: 'Company of Strangers' }
     ];
+    // For the company-detail page
+    // I need to substitute the phone for something that better describes the brand
     const companydetail = [
       { id: 'lon001', phone: '555-1234' , description: 'This is a description for company "lon001".'},
       { id: 'ilu001', phone: '555-4567' , description: 'This is a description for company "ilu001".'},
