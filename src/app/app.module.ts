@@ -62,10 +62,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 const routes: Routes = [
   {
-    path: 'companies',
-    component: CompaniesComponent
-  },
-  {
     path: 'company-detail',
     component: CompanyDetailComponent
   },
@@ -76,11 +72,6 @@ const routes: Routes = [
   {
     path: 'explanations',
     component: ExplanationsComponent
-  },
-  {
-    path: '',
-    redirectTo: '/dashboard',
-    pathMatch: 'full'
   },
   { path: 'detail/:key',
   component: CompanyDetailComponent 

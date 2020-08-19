@@ -1,0 +1,19 @@
+p {
+    color: white;
+}
+
+.go-back {
+    /* Button */
+    display: block;
+    background-color: black;
+}
+
+button {
+    background-color: blue;
+}
+
+.main-content {
+    /* Company description */
+    background-color: black;
+    width: 50rem;
+}

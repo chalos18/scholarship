@@ -1,10 +1,5 @@
-<div class="top-companies">
-    <h3>Top Companies</h3>
-    <app-search-box></app-search-box>
-</div>
-
-<div class="category-menu">
-    <ul>
+<div class="side-nav">
+    <div class="category-menu">
         <li>
             <a (click)="currentMenu = 'fashion'">Fashion</a>
             <a (click)="currentMenu = 'shoes'">Shoes</a>
@@ -14,50 +9,48 @@
             <a (click)="currentMenu = 'beverages'">Beverages</a>
             <a (click)="currentMenu = 'gaming'">Gaming</a>
         </li>
-    </ul>
-</div>
-
-
-<div class="fashion" *ngIf="currentMenu == 'fashion'">
-    <h2>My Companies</h2>
-
-    <div>
-        <label>Company name:
-                <app-search-box></app-search-box>
-            </label>
     </div>
 
-    <ul>
-        <li *ngFor="let company of companies">
-            <a [routerLink]="['/detail', company.key]">{{company.name}}</a>
-        </li>
-    </ul>
-</div>
-<div *ngIf="currentMenu == 'shoes'">
-    <app-search-box></app-search-box>
-    <a href="">DC</a>
-    <a href="">Nike</a>
-    <a href="">Adidas</a>
-</div>
-<div *ngIf="currentMenu == 'electronics'">
-    <app-search-box></app-search-box>
-    <a href="">Panasonic</a>
-    <a href="">Dell</a>
-    <a href="">Alienware</a>
-</div>
-<div *ngIf="currentMenu == 'jewelry'">
-    <app-search-box></app-search-box>
-    <a href="">Pandora</a>
-</div>
-<div *ngIf="currentMenu == 'cosmetics'">
-    <app-search-box></app-search-box>
-    <a href="">Nike</a>
-</div>
-<div *ngIf="currentMenu == 'beverages'">
-    <app-search-box></app-search-box>
-    <a href="">Pandora</a>
-</div>
-<div *ngIf="currentMenu == 'gaming'">
-    <app-search-box></app-search-box>
-    <a href="">Riot</a>
+    <div class="side-body">
+        <div class="fashion-nav" *ngIf="currentMenu == 'fashion'">
+            <app-search-box></app-search-box>
+            <ul>
+                <!-- creates the list of companies -->
+                <li *ngFor="let company of companies">
+                    <!-- Goes from /rating to /detail/lon001 -->
+                    <a [routerLink]="['/detail', company.key]">{{company.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- To be changed when Fashion part is completed -->
+    <div *ngIf="currentMenu == 'shoes'">
+        <app-search-box></app-search-box>
+        <a href="">DC</a>
+        <a href="">Nike</a>
+        <a href="">Adidas</a>
+    </div>
+    <div *ngIf="currentMenu == 'electronics'">
+        <app-search-box></app-search-box>
+        <a href="">Panasonic</a>
+        <a href="">Dell</a>
+        <a href="">Alienware</a>
+    </div>
+    <div *ngIf="currentMenu == 'jewelry'">
+        <app-search-box></app-search-box>
+        <a href="">Pandora</a>
+    </div>
+    <div *ngIf="currentMenu == 'cosmetics'">
+        <app-search-box></app-search-box>
+        <a href="">Nike</a>
+    </div>
+    <div *ngIf="currentMenu == 'beverages'">
+        <app-search-box></app-search-box>
+        <a href="">Pandora</a>
+    </div>
+    <div *ngIf="currentMenu == 'gaming'">
+        <app-search-box></app-search-box>
+        <a href="">Riot</a>
+    </div>
 </div>

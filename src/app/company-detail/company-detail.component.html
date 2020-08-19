@@ -1,12 +1,9 @@
-<div *ngIf="company">
-
-    <h2>{{company.name | uppercase}} Details</h2>
-    <div>
-        <label>name:
-      <input [(ngModel)]="company.name" placeholder="name"/>
-    </label>
+<div class="main-content">
+    <p>
+        <!-- To be changed into a better description of the company -->
+        The company phone number is {{ companyDetail.phone }}. The company description is {{ companyDetail.description }}
+    </p>
+    <div class="go-back">
+        <button (click)="goBack()">go back</button>
     </div>
 </div>
-<div style="color:red;">The company phone number is {{ companyDetail.phone }}</div>
-<div style="color:red;">The company description is {{ companyDetail.description }}</div>
-<button (click)="goBack()">go back</button>

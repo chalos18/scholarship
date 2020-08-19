@@ -17,12 +17,6 @@
         </div>
         <div class="level-right">
             <p class="level-item has-text-centered">
-                <a routerLink="/companies" class="link is-info">Companies</a>
-            </p>
-            <p class="level-item has-text-centered">
-                <a routerLink="/brands" class="link is-info">Brands</a>
-            </p>
-            <p class="level-item has-text-centered">
                 <a routerLink="/rating" class="link is-info">Rating</a>
             </p>
             <p class="level-item has-text-centered">
@@ -32,6 +26,10 @@
         </div>
     </nav>
 </header>
+
+<aside>
+    <app-companies></app-companies>
+</aside>
 
 <body>
     <router-outlet></router-outlet>

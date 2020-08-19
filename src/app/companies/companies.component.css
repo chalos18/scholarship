@@ -1,28 +1,44 @@
-html {
+/* Parent of category-menu */
+
+.side-nav {
+    /* Makes the size of the navbar not change */
+    position: fixed;
+    /* This makes the sidenav show all along the page */
     height: 100%;
-    margin: auto;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
+
+
+/* Child of .side-nav */
 
 .category-menu {
+    /* Widht of the side-nav */
+    width: 11.2rem;
     background-color: #3C4F76;
-    width: 20rem;
-    color: white;
+    /* takes away bullet point */
+    list-style-type: none;
 }
 
-.fashion {
+.side-body {
+    /* Makes height 100% */
+    display: flex;
+    margin-left: 1rem;
+}
+
+.fashion-nav {
     background: #3C4F76;
-    width: 20rem;
+    width: 11.2rem;
 }
 
 a {
+    /* Makes a line under each link */
+    border-bottom: 1px solid white;
     color: white;
 }
 
 a:hover {
-    background-color: white;
+    border-bottom: 1px solid black;
     color: black;
-}
-
-ul {
-    list-style-type: none;
 }
