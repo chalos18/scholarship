@@ -57,7 +57,6 @@ import { ExplanationsComponent } from './explanations/explanations.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
 const routes: Routes = [
@@ -76,10 +75,6 @@ const routes: Routes = [
   { path: 'detail/:key',
   component: CompanyDetailComponent 
   },
-  {
-    path: 'main-nav',
-    component: MainNavComponent
-  },
 ];
 
 @NgModule({
@@ -90,7 +85,6 @@ const routes: Routes = [
     ExplanationsComponent,
     SearchBoxComponent,
     CompanyDetailComponent,
-    MainNavComponent,
   ],
   exports: [
     A11yModule,

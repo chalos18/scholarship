@@ -59,14 +59,7 @@ export class CompanyService {
     );
   }
 
-  /** GET company detail by key. Will 404 if name not found */
-  getCompanyDetail(key: string): Observable<CompanyDetail> {
-    const url = `${this.companydetailUrl}/${key}`;
-    return this.http.get<CompanyDetail>(url).pipe(
-      tap(result => this.log(`fetched company name=${result.phone}`)),
-      catchError(this.handleError<CompanyDetail>(`getCompanyDetail failed`))
-    );
-  }
+
 
   /* GET companies whose name contains search term */
   searchCompanies(term: string): Observable<Company[]> {

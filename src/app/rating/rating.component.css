@@ -1,5 +1,18 @@
 .main-content {
-    text-align: center;
-    background-color: black;
-    width: 50rem;
+  text-align: center;
+  background-color: black;
+  width: 50rem;
+}
+
+.top-companies {
+  background-color: saddlebrown;
+  display: flex;
+  list-style-type: none;
+}
+
+a {
+    color:antiquewhite;
+    display:block;
+    text-decoration: none;
+    color: black;
 }

@@ -3,6 +3,6 @@
 // add more for a better description of each brand
 export interface CompanyDetail {
   id: string;
-  phone: string;
+  title: string;
   description : string;
 }

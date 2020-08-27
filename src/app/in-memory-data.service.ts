@@ -22,16 +22,16 @@ export class InMemoryDataService implements InMemoryDbService {
     // For the company-detail page
     // I need to substitute the phone for something that better describes the brand
     const companydetail = [
-      { id: 'lon001', phone: '555-1234' , description: 'This is a description for company "lon001".'},
-      { id: 'ilu001', phone: '555-4567' , description: 'This is a description for company "ilu001".'},
-      { id: 'com001', phone: '555-7890' , description: 'This is a description for company "com001".'},
-      { id: 'huf001', phone: '555-2222' , description: 'This is a description for company "huf001".'},
-      { id: 'sgc', phone: '555-3333' , description: 'This is a description for company "sgc".'},
-      { id: 'kow', phone: '555-4444' , description: 'This is a description for company "kow".'},
-      { id: 'wid', phone: '555-5555' , description: 'This is a description for company "wid".'},
-      { id: 'sto', phone: '555-6666' , description: 'This is a description for company "sto".'},
-      { id: 'tre', phone: '555-7777' , description: 'This is a description for company "tre".'},
-      { id: 'com002', phone: '555-8888' , description: 'This is a description for company "com002".'},
+      { id: 'lon001', title: 'Lonely' , description: 'This is a description for company "lon001".'},
+      { id: 'ilu001', title: 'I Love Ugly' , description: 'This is a description for company "ilu001".'},
+      { id: 'com001', title: 'Commoners' , description: 'This is a description for company "com001".'},
+      { id: 'huf001', title: 'Huffer' , description: 'This is a description for company "huf001".'},
+      { id: 'sgc', title: 'Stolen Girlfriends CLub' , description: 'This is a description for company "sgc".'},
+      { id: 'kow', title: 'Kowtow' , description: 'This is a description for company "kow".'},
+      { id: 'wid', title: 'Widdess' , description: 'This is a description for company "wid".'},
+      { id: 'sto', title: 'Storm' , description: 'This is a description for company "sto".'},
+      { id: 'tre', title: 'Trelise Cooper' , description: 'This is a description for company "tre".'},
+      { id: 'com002', title: 'Company of Strangers' , description: 'This is a description for company "com002".'},
     ];
     return { companies, companydetail };
   }
