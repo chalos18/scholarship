@@ -28,7 +28,7 @@ export class CompanyDetailComponent implements OnInit {
     this.route.params.subscribe(params => {
       let key = params['key'];
       this.companyService.getCompanyDetail(key).subscribe(detail => {
-        // show the detail on the page
+        // shows the detail on the page
         this.companyDetail = detail;
       });
     });
