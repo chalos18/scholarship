@@ -59,6 +59,13 @@ export class CompanyService {
     );
   }
 
+  getCompanyDetail(name: string): Observable<CompanyDetail> {
+    const url = `${this.companydetailUrl}/${name}`;
+    return this.http.get<CompanyDetail>(url).pipe(
+      tap(_ => this.log(`fetched company detail name=${name}`)),
+      catchError(this.handleError<CompanyDetail>(`getCompany Detail name=${name}`))
+    );
+  }
 
 
   /* GET companies whose name contains search term */

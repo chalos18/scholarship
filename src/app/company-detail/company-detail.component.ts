@@ -1,11 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Location } from '@angular/common';
+import { Location, LocationStrategy } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
 import { CompanyService } from '../company.service';
 import { Company } from '../company';
 import { CompanyDetail } from '../companydetail';
-
 
 @Component({
   selector: 'app-company-detail',
