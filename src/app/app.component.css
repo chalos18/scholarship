@@ -1,34 +1,101 @@
-html {
-    /* Hides scrollbar on navbar */
-    overflow-y: hidden;
+/*html {
+  background: url('D:\Coding\Angular\Scholarship\scholarship\src\app\images\phone-thrown0000.jpg') no-repeat center center fixed;
+  background-size: cover;
+}*/
+
+
+/*Helpers*/
+.hero {
+  background-color: bisque;
 }
 
-body {
-    /* Makes the body not clash with the side-nav (needs to look into why the side-nav isnt in the HTML) */
-    display: grid;
-    grid-template-columns: 30% auto;
+.center, .center-column, .top, .right, .bottom, .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.navbar {
-    font-size: 1.5rem;
-    background-color: transparent;
-    /* Padding of left and right side of the links */
-    padding: 0 20px;
+.center-column {
+  flex-direction: column;
 }
 
-.link {
-    /* Links in navbar */
-    color: white;
-    padding: 1rem;
+.top {
+  align-items: flex-start;
 }
 
-.link:hover {
-    color: #3C4F76;
+.right {
+  justify-content: flex-end;
 }
 
-.my-website {
-    /* Logo on the left */
-    color: #DDDBF1;
-    padding-right: 2rem;
-    border-right: 1px solid white;
+.bottom {
+  align-items: flex-end;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.single-spaced, .single-spaced * {
+  line-height: 1;
+}
+
+#a {
+  grid-area: a;
+}
+
+#b {
+  grid-area: b;
+}
+
+#c {
+  grid-area: c;
+}
+
+#d {
+  grid-area: d;
+}
+
+#e {
+  grid-area: e;
+}
+
+#grid {
+  display: grid;
+  grid-template-areas: "a a a a" "b c d e";
+  grid-row-gap: 1rem;
+}
+
+@media (max-width: 512px) {
+    .navbar-item{
+        font-size:5px;
+    }
+  #grid {
+    grid-template-areas: "a a a" "b c d" "e e e";
+  }
+}
+
+@media (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+}
+
+/*Debug
+*:not(path):not(g) {
+  color: hsla(210, 100%, 100%, 0.9) !important;
+  background: hsla(210, 100%, 50%, 0.5) !important;
+  outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+  box-shadow: none !important;
+}*/
+
+@media (max-width: 1024px) {
+  .hero {
+    background-color: aliceblue;
+  }
+}
+
+@media (max-width: 668px) {
+  .hero {
+    background-color: brown;
+  }
 }

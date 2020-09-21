@@ -23,7 +23,7 @@ export class CompanyDetailComponent implements OnInit {
     private location: Location,
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
     this.route.params.subscribe(params => {
       let key = params['key'];
       this.companyService.getCompanyDetail(key).subscribe(detail => {

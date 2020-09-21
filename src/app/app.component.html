@@ -2,37 +2,63 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-    <script src="./header/search-box/search-box.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <title>Document</title>
 </head>
-<header>
-    <nav class="navbar level">
-        <div class="level-left">
-            <p class="level-item has-text-centered my-website">
-                My Website
-            </p>
-        </div>
-        <div class="level-right">
-            <p class="level-item has-text-centered">
-                <a routerLink="/ratings" class="link is-info">Rating</a>
-            </p>
-            <p class="level-item has-text-centered">
-                <a routerLink="/top-companies" class="link is-info">Top Companies</a>
-            </p>
-            <app-search-box></app-search-box>
-        </div>
-    </nav>
-</header>
-
-<aside>
-    <app-companies></app-companies>
-</aside>
 
 <body>
-    <router-outlet></router-outlet>
+
+  <section class="hero is-fullheight">
+
+    <nav class="hero-head">
+      <div class="columns is-mobile is-marginless heading">
+        <div class="column left">
+          <div class=" has-text-white is-size-6-mobile">
+            <p>My Website</p>
+          </div>
+          <figure class="navbar-item has-text-white is-size-6-mobile">
+            <p>Bar</p>
+            <i class="fas fa-bars" style="width: 6.25rem; height: 1rem;"></i>
+          </figure>
+        </div>
+        <div class="column center desktop">
+          <p class="navbar-item has-text-black">
+            <a routerLink="/ratings">Ratings</a>
+          </p>
+          <p class="navbar-item has-text-black">
+            <a routerLink="/top-companies" class="link is-info">Top Companies</a>
+          </p>
+        </div>
+        <div class="column right">
+          <p class="navbar-item has-text-black desktop">SHOP     </p>
+          <p class="navbar-item has-text-black desktop">SIGN IN  </p>
+          <app-search-box></app-search-box>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-body columns">
+      <div class="column is-one-quarter">
+        <app-companies></app-companies>
+      </div>
+      <div class="column is-half">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <main class="hero-foot center" style="padding: 2rem;">
+      <div id="a" class="center-column">
+        <p class="has-text-centered has-text-black">
+          This is a very cool and fun footer
+        </p>
+      </div>
+    </main>
+
+
+  </section>
 </body>
 
 </html>
