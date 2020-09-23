@@ -4,8 +4,11 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\companies",
+    "\\src\\app\\company-detail",
+    "\\src\\app\\ratings",
+    "\\src\\app\\search-box",
     "\\src\\app\\top-companies"
   ],
-  "SelectedNode": "\\src\\app\\app.component.html",
+  "SelectedNode": "\\src\\app\\top-companies\\top-companies.component.html",
   "PreviewInSolutionExplorer": false
 }
