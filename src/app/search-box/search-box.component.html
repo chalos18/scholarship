@@ -1,8 +1,10 @@
-<input #searchBox (input)="search(searchBox.value)" placeholder="Company name ...">
+ 
+<input class="input is-small is-rounded" #searchBox (input)="search(searchBox.value)" placeholder="Company name ...">
+
 <ul class="search-result">
-    <li *ngFor="let company of companies$ | async">
-        <a [routerLink]="['/detail', company.key]">
-             {{company.name}}
-        </a>
-    </li>
+  <li *ngFor="let company of companies$ | async">
+    <a [routerLink]="['/detail', company.key]">
+      {{company.name}}
+    </a>
+  </li>
 </ul>
