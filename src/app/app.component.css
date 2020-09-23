@@ -3,7 +3,7 @@
   background-size: cover;
 }*/
 
-/*! debug.css | MIT License | zaydek.github.com/debug.css */
+! debug.css | MIT License | zaydek.github.com/debug.css 
 *:not(path):not(g) {
   color: hsla(210, 100%, 100%, 0.9) !important;
   background: hsla(210, 100%, 50%, 0.5) !important;
@@ -11,7 +11,7 @@
   box-shadow: none !important;
 }
 /*Helpers*/
-.hero {
+.hero{
   background-color: bisque;
 }
 
@@ -75,6 +75,9 @@
     .navbar-item{
         font-size:5px;
     }
+  hero {
+    background-color: brown;
+  }
   #grid {
     grid-template-areas: "a a a" "b c d" "e e e";
   }
@@ -84,24 +87,7 @@
   .desktop {
     display: none;
   }
-}
-
-/*Debug
-*:not(path):not(g) {
-  color: hsla(210, 100%, 100%, 0.9) !important;
-  background: hsla(210, 100%, 50%, 0.5) !important;
-  outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
-  box-shadow: none !important;
-}*/
-
-@media (max-width: 1024px) {
   .hero {
     background-color: aliceblue;
-  }
-}
-
-@media (max-width: 668px) {
-  .hero {
-    background-color: brown;
   }
 }

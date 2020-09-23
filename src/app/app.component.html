@@ -9,59 +9,60 @@
   <title>Scholarship</title>
 </head>
 
-<body>
+<body class="hero is-fullheight">
+  <nav class="navbar " role="navigation" aria-label="main navigation">
+    <div class="navbar-brand has-text-black">
+      <p>My Website</p>
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
 
-  <section class="hero is-fullheight">
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <div class="navbar-item has-dropdown is-hoverable">
 
-    <nav class="hero-head">
-      <div class="columns is-mobile is-marginless heading">
-        <div class="column left">
-          <div class=" has-text-white is-size-6-mobile">
-            <p>My Website</p>
+          <a class="navbar-link">
+            More
+          </a>
+
+          <div class="navbar-dropdown">
+
+            <a class="navbar-item">
+              <app-companies></app-companies>
+            </a>
+
           </div>
-          <figure class="navbar-item has-text-white is-size-6-mobile">
-            <p>Bar</p>
-            <i class="fas fa-bars"></i>
-          </figure>
+
         </div>
-        <div class="column center desktop">
-          <p class="navbar-item has-text-black">
-            <a routerLink="/ratings">Ratings</a>
-          </p>
-          <p class="navbar-item has-text-black">
-            <a routerLink="/top-companies" class="link is-info">Top Companies</a>
-          </p>
-        </div>
-        <div class="column right">
-          <p class="navbar-item has-text-black desktop">SHOP     </p>
-          <p class="navbar-item has-text-black desktop">SIGN IN  </p>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+
+          <a class="navbar-item has-text-black" routerLink="/ratings">Ratings</a>
+          <a class="navbar-item has-text-black" routerLink="/top-companies">Top Companies</a>
           <app-search-box></app-search-box>
+
         </div>
       </div>
-    </nav>
-
-    <div class="hero-body columns">
-      <div class="column is-one-quarter is-hidden-mobile">
-        <app-companies></app-companies>
-      </div>
-      <div class="column is-half">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-
-    <main class="hero-foot center" style="padding: 2rem;">
-      <div id="a" class="center-column">
-        <p class="has-text-centered has-text-black">
-          This is a very cool and fun footer
-        </p>
-      </div>
-    </main>
-
-    <div>
 
     </div>
+  </nav>
 
-  </section>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+  <main class="footer center is-fixed-bottom" style="padding: 2rem;">
+    <div id="a" class="center-column">
+      <p class="has-text-centered has-text-black">
+        This is a very cool and fun footer
+      </p>
+    </div>
+  </main>
 </body>
 
 </html>
