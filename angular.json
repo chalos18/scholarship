@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "scholarship"
+  "defaultProject": "scholarship",
+  "cli": {
+    "analytics": false
+  }
 }

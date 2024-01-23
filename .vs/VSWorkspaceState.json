@@ -2,13 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app",
-    "\\src\\app\\companies",
-    "\\src\\app\\company-detail",
-    "\\src\\app\\ratings",
-    "\\src\\app\\search-box",
-    "\\src\\app\\top-companies"
+    "\\src\\app"
   ],
-  "SelectedNode": "\\src\\app\\top-companies\\top-companies.component.html",
+  "SelectedNode": "\\src\\app\\company.ts",
   "PreviewInSolutionExplorer": false
 }
